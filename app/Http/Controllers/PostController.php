@@ -2,17 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Http\Request;
 use App\Models\Post;
 
-class Controller extends BaseController
+class PostController extends Controller
 {
     public function index(Post $post)
-{
-    return $post->get();
-}
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    {
+        return $post->get();
+    }
 }
