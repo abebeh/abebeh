@@ -13,7 +13,17 @@ class PostController extends Controller
 {
     public function index(Post $post)
     {
-        return view('posts.index')->with(['posts'=>$post->getPaginateBylimit()]);
+        return view('posts.index')->with(['posts'=>$post->getPaginateBylimit(1)]);
+    }
+    
+    public function show(Post $post)
+    {
+        return view('postsi/show')->with(['post' => $post]);
+    }
+    
+    public function create()
+    {
+        return view('posts/create');
     }
 
     
